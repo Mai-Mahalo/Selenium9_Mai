@@ -1,7 +1,7 @@
 package com.neotech.pages;
 
-// Lesson 14
-// Need to watch again!!!
+// Lesson 14 & 15
+// Need to watch again!!
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,6 +19,12 @@ public class LoginPageUsingPageFactory {
 
 	@FindBy(xpath = "//button")
 	public WebElement loginBtn;
+
+	@FindBy(id = "txtPassword-error")
+	public WebElement passwordError;
+
+	@FindBy(xpath = "//div[@class='toast-message']")
+	public WebElement invalidPasswordMsg;
 
 	public LoginPageUsingPageFactory() {
 		PageFactory.initElements(BaseClass.driver, this);

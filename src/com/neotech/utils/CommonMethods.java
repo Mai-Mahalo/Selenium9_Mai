@@ -6,6 +6,7 @@ import java.util.Set;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -248,6 +249,71 @@ public class CommonMethods extends BaseClass {
 	public static void click(WebElement element) {
 		waitForClickability(element);
 		element.click();
+	}
+
+	/**
+	 * This method will cast the driver to a JavascriptExecutor object
+	 * 
+	 * @return
+	 */
+	public static JavascriptExecutor getJSObject() {
+		return (JavascriptExecutor) driver;
+	}
+
+	/**
+	 * This method will click on an element using the JavascriptExecuter
+	 * 
+	 * @param element
+	 */
+	public static void jsClick(WebElement element) {
+		getJSObject().executeScript("arguments[0].click()", element);
+	}
+
+	/**
+	 * This method scrolls the page down using the pixels parameter
+	 * 
+	 * @param pixels
+	 */
+	public static void scrollDown(int pixels) {
+		getJSObject().executeScript("window.scrollBy(0," + pixels + ")");
+	}
+
+	/**
+	 * This method scrolls the page up using the pixels parameter
+	 * 
+	 * @param pixels
+	 */
+	public static void scrollUp(int pixels) {
+		getJSObject().executeScript("window.scrollBy(0,-" + pixels + ")");
+	}
+
+	/**
+	 * This method scrolls the page until the web element is visible in page
+	 * 
+	 * @param element
+	 */
+	public static void scrollToElement(WebElement element) {
+		getJSObject().executeScript("arguments[0].scrollIntoView(true)", element);
+	}
+
+	/**
+	 * This method selects the day from a list of days
+	 * 
+	 * @param days
+	 * @param selectedDay
+	 */
+	public static void selectCalendarDate(List<WebElement> days, String selectedDay) {
+		for (WebElement day : days) {
+			if (day.getText().equals(selectedDay)) {
+				if (day.isEnabled()) {
+					click(day);
+					break;
+				} else {
+					System.out.println("This day is not enabled!!!");
+					break;
+				}
+			}
+		}
 	}
 
 }
