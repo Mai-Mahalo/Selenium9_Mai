@@ -1,7 +1,7 @@
 package com.neotech.test;
 
-// Lesson 14
-// Need to watch again!!!
+// Selenium 9, Lesson 14, until 24:00
+// https://hrm.neotechacademy.com   
 
 import com.neotech.pages.DashboardPage;
 import com.neotech.pages.LoginPage;
