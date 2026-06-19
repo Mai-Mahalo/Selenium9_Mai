@@ -1,7 +1,8 @@
 package com.neotech.pages;
 
 // Lesson 14 & 15
-// Need to watch again!!
+// Lesson 14, Part-3, (16:00)
+// https://hrm.neotechacademy.com
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,5 +29,6 @@ public class LoginPageUsingPageFactory {
 
 	public LoginPageUsingPageFactory() {
 		PageFactory.initElements(BaseClass.driver, this);
+		// this = LoginPageUsingPageFactory
 	}
 }

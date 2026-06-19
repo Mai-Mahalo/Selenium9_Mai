@@ -1,34 +1,35 @@
 package com.neotech.lesson15;
 
-// Lesson 15
-// Part-3
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import com.neotech.utils.CommonMethods;
 
-public class Task1 extends CommonMethods {
-	// Go to https://the-internet.herokuapp.com/key_presses
-	// Press on ESC, TAB, and ENTER.
+// Go to https://the-internet.herokuapp.com/key_presses
+// Press on ESC, TAB, and ENTER.
+
+public class Task1_2 extends CommonMethods {
 
 	public static void main(String[] args) {
+
 		setUp();
 
-		WebElement box = driver.findElement(By.id("target"));
+		WebElement searchBox = driver.findElement(By.id("target"));
 
-		box.sendKeys(Keys.ESCAPE);
+		searchBox.sendKeys(Keys.ESCAPE);
+
 		wait(2);
 
-		box.sendKeys(Keys.TAB);
+		searchBox.sendKeys(Keys.TAB);
+
 		wait(2);
 
-		box.sendKeys(Keys.ENTER);
-		wait(2);
+		searchBox.sendKeys(Keys.ENTER);
 
 		// OR
 		// box.sendKeys(Keys.ESCAPE.TAB.ENTER);
+		// Method chaining
 
 		tearDown();
 

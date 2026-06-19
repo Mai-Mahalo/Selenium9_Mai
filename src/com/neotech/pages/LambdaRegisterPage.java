@@ -1,7 +1,7 @@
 package com.neotech.pages;
 
-// Lesson 15
-// Need to watch again!!!
+// Lesson 15 (37:00)
+
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

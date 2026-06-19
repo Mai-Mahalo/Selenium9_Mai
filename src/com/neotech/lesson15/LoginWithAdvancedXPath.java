@@ -1,7 +1,7 @@
 package com.neotech.lesson15;
 
-// Lesson 15
-// Need to watch again!!!
+// Lesson 15, Part-3, 12:00
+// https://hrm.neotechacademy.com/
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,7 @@ import com.neotech.utils.CommonMethods;
 import com.neotech.utils.ConfigsReader;
 
 public class LoginWithAdvancedXPath extends CommonMethods {
-	// https://hrm.neotechacademy.com/
+	
 	public static void main(String[] args) {
 		setUp();
 

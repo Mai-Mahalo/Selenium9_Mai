@@ -1,6 +1,6 @@
 package com.neotech.lesson15;
 
-// Lesson 15
+// Lesson 15, Part-3 (37:00)
 // Need to watch again!!!
 
 import com.neotech.pages.LambdaRegisterPage;
@@ -14,6 +14,8 @@ public class LambdaTest extends CommonMethods {
 	 * Find the Business Email as a cousin of the password element and enter an email 
 	 * Close the browser
 	 */
+	
+	// The code will be error coz the UI has been changed.
 
 	public static void main(String[] args) {
 		setUp();

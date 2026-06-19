@@ -1,7 +1,7 @@
 package com.neotech.test;
 
-// Lesson 14
-// Need to watch again!!!
+//Lesson 14, Part 3, 27:00
+//https://hrm.neotechacademy.com
 
 import com.neotech.pages.DashboardPageUsingPageFactory;
 import com.neotech.pages.LoginPageUsingPageFactory;

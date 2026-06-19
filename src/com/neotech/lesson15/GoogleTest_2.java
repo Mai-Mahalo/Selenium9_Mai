@@ -1,33 +1,34 @@
 package com.neotech.lesson15;
 
-// Lesson 15 part-2, 41:00
-// https://www.google.com
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import com.neotech.utils.CommonMethods;
 
-public class GoogleTest extends CommonMethods {
+// Lesson 15 part-2, 41:00
+// https://www.google.com
 
+public class GoogleTest_2 extends CommonMethods {
+	
 	public static void main(String[] args) {
-
+		
 		setUp();
-
+		
 		WebElement searchBox = driver.findElement(By.name("q"));
-
-		searchBox.sendKeys("selenium");
-
+		// We found id "APjFqb" but it might be dynamic so we used the name "q".
+		
+		searchBox.sendKeys("Selenium");
+		
 		wait(2);
-
-		// now lets click on Enter key to start the search
+		
 		searchBox.sendKeys(Keys.ENTER);
-
+		
 		wait(2);
-
+		
 		tearDown();
-
+		
+		
 	}
 
 }
